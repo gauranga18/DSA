@@ -1,13 +1,21 @@
 #include<iostream>
 using namespace std;
+
 int main(){
-    int arr[6];
-    cout<<"Enter the elements of the array  :"<<endl;
-    for(int i=0;i<6;i++){
-        cin>>arr[i];
+    const int size = 6;  // Use a constant for the array size
+    int arr[size];
+    cout << "Enter the elements of the array: " << endl;
+
+    for(int i = 0; i < size; i++){
+        cin >> arr[i];
     }
-    float total=arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5];
-    cout<<"The sum of the elements of the array is :"<<total<<endl;
+
+    int total = 0;  // Use int for total
+    for(int i = 0; i < size; i++){
+        total += arr[i];  // Sum elements in a loop
+    }
+
+    cout << "The sum of the elements of the array is: " << total << endl;
     
     return 0;
 }
